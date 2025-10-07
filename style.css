@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: black;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.glass-box {
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+button {
+  background: red;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  box-shadow: 0 0 20px red, 0 0 40px red, 0 0 60px red;
+  animation: pulse 1.5s infinite;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px red, 0 0 60px red, 0 0 90px red;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red; }
+  50% { box-shadow: 0 0 30px red, 0 0 60px red, 0 0 90px red; }
+  100% { box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red; }
+}
+
